@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vol-pod
+spec:
+  containers:
+  - name: vol-container
+    image: ubuntu
+    args: ["sleep", "36500000"]
+    volumeMounts:
+    - mountPath: /examplevol
+      name: examplevol
+  restartPolicy: Never
+  volumes:
+    - name: examplevol
+      persistentVolumeClaim:
+        claimName: examplevol

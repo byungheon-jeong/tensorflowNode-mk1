@@ -10,6 +10,6 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 1
-        memory: "32Gi"
-        cpu: "14.4"
+        memory: "8Gi"
+        cpu: "2"
         

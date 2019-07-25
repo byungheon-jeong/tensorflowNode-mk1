@@ -14,7 +14,7 @@ spec:
     image: ubuntu
     args: ["sleep", "36500000"]
     volumeMounts:
-    - mountPath: /examplevol
+    - mountPath: https://raw.githubusercontent.com/byungheon-jeong/tensorflowNode-mk1/master/blockstorageconfig.yaml
       name: examplevol
   restartPolicy: Never
   volumes:

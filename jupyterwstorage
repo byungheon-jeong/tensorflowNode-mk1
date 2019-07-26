@@ -14,10 +14,10 @@ spec:
     image: ubuntu
     args: ["sleep", "36500000"]
     volumeMounts:
-    - mountPath: /examplevol
-      name: examplevol
+    - mountPath: /examplevol2
+      name: examplevol2
   restartPolicy: Never
   volumes:
-    - name: examplevol
+    - name: examplevol2
       persistentVolumeClaim:
-        claimName: examplevol
+        claimName: examplevol2

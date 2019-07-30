@@ -10,9 +10,6 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 1
-  - name: vol-container
-    image: ubuntu
-    args: ["sleep", "36500000"]
     volumeMounts:
     - mountPath: /examplevol2
       name: examplevol2

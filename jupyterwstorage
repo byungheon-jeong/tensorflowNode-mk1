@@ -12,9 +12,6 @@ spec:
     resources:
       limits:
         nvidia.com/gpu: 1
-    volumeMounts:
-    - mountPath: /examplevol2
-      name: examplevol2
   restartPolicy: Never
  volumes:
  - name: fs-store

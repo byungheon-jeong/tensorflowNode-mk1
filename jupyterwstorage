@@ -17,7 +17,14 @@ spec:
     - mountPath: /examplevol2
       name: examplevol2
   restartPolicy: Never
-  volumes:
-    - name: examplevol2
-      persistentVolumeClaim:
-        claimName: examplevol2
+ volumes:
+ - name: fs-store
+   flexVolume:
+     driver: ceph.rook.io/rook
+     fsType: ceph
+     options:
+       clusterNamespace: rook
+       fsName: nautilusfs
+       path: /b1jeong
+       mountUser: b1jeong
+       mountSecret: ceph-fs-secret
